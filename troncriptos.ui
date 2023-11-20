@@ -1881,6 +1881,199 @@ QLineEdit{
              </size>
             </property>
            </widget>
+           <widget class="QPushButton" name="pushButton_33">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="permTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="permCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="permDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_34">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_35">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="permGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="permCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="permTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="clTransposicion">
            <property name="styleSheet">
@@ -1925,6 +2118,199 @@ QLineEdit{
               <width>125</width>
               <height>24</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_36">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="transTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="transCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="transDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_37">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_38">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="transGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="transCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="transTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
@@ -1973,6 +2359,191 @@ QLineEdit{
              </size>
             </property>
            </widget>
+           <widget class="QPushButton" name="pushButton_100">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>23</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_101">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_102">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="susDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="susCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="susTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="susTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>573</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="susClave">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>140</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>70</y>
+              <width>291</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13)</string>
+            </property>
+            <property name="text">
+             <string>Texto en mayúsculas y sin espacios</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="clAfin">
            <property name="styleSheet">
@@ -2017,6 +2588,199 @@ QLineEdit{
               <width>33</width>
               <height>19</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_39">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="afinTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="afinCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="afinDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_40">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_41">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="afinGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="afinCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="afinTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
@@ -2089,6 +2853,199 @@ QLineEdit{
               <width>124</width>
               <height>35</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_42">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="hilTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="hilCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="hilDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_43">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_44">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="hilGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="hilCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="hilTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
@@ -2209,6 +3166,199 @@ QLineEdit{
              </size>
             </property>
            </widget>
+           <widget class="QPushButton" name="pushButton_45">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="sdesTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="sdesCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="sdesDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_46">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_47">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="sdesGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="sdesCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="sdesTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="blTdes">
            <property name="styleSheet">
@@ -2255,6 +3405,199 @@ QLineEdit{
              </size>
             </property>
            </widget>
+           <widget class="QPushButton" name="pushButton_48">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="tdesTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="tdesCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="tdesDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_49">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_50">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="tdesGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="tdesCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="tdesTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="blDes">
            <property name="styleSheet">
@@ -2299,6 +3642,199 @@ QLineEdit{
               <width>32</width>
               <height>19</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_51">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="desTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="desCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="desDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_52">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_53">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="desGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="desCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="desTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
@@ -2371,6 +3907,199 @@ QLineEdit{
               <width>124</width>
               <height>35</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_54">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="aesTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="aesCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="aesDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_58">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_59">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="aesGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="aesCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="aesTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
@@ -2491,6 +4220,199 @@ QLineEdit{
              </size>
             </property>
            </widget>
+           <widget class="QPushButton" name="pushButton_60">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="rsaTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rsaCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rsaDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_61">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_62">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rsaGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rsaCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="rsaTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="clRabin">
            <property name="styleSheet">
@@ -2535,6 +4457,199 @@ QLineEdit{
               <width>48</width>
               <height>19</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_63">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="rabTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rabCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rabDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_64">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_65">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rabGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="rabCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="rabTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
@@ -2583,6 +4698,199 @@ QLineEdit{
              </size>
             </property>
            </widget>
+           <widget class="QPushButton" name="pushButton_66">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="gamTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="gamCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="gamDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_67">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_68">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="gamGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="gamCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="gamTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="fiRsa">
            <property name="styleSheet">
@@ -2627,6 +4935,199 @@ QLineEdit{
               <width>33</width>
               <height>19</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_69">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="fiRsaTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiRsaCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiRsaDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_70">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_71">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiRsaGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiRsaCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="fiRsaTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
@@ -2675,6 +5176,199 @@ QLineEdit{
              </size>
             </property>
            </widget>
+           <widget class="QPushButton" name="pushButton_72">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="fiDsaTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiDsaCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiDsaDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_73">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_74">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiDsaGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiDsaCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="fiDsaTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="fiGamal">
            <property name="styleSheet">
@@ -2719,6 +5413,199 @@ QLineEdit{
               <width>74</width>
               <height>19</height>
              </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_75">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="fiGamTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiGamCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiGamDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_76">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_77">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiGamGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="fiGamCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="fiGamTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
             </property>
            </widget>
           </widget>
