@@ -1,0 +1,2456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>856</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="Background">
+      <property name="styleSheet">
+       <string notr="true">#Background{
+	background-color:rgb(22, 30, 56);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignTop">
+        <widget class="QFrame" name="Header">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">*{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QPushButton{
+	color: rgb(255,255,255);
+	background:transparent;
+	border:none;
+}
+QPushButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+           <widget class="QFrame" name="frame_4">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QToolButton" name="toolButton_4">
+               <property name="minimumSize">
+                <size>
+                 <width>163</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>ArrowCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>src/menuIcon.png</normaloff>src/menuIcon.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>25</width>
+                 <height>25</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignVCenter">
+           <widget class="QFrame" name="frame_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255)</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item alignment="Qt::AlignVCenter">
+              <widget class="QLabel" name="label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Bahnschrift</family>
+                 <pointsize>13</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Troncriptos</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QFrame" name="frame_3">
+            <property name="minimumSize">
+             <size>
+              <width>163</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="minimumSize">
+                <size>
+                 <width>27</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>27</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>ArrowCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>src/minimizarIcon.png</normaloff>src/minimizarIcon.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>27</width>
+                 <height>27</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="maximumSize">
+                <size>
+                 <width>27</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="cursor">
+                <cursorShape>ArrowCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>src/cerrarIcon.png</normaloff>src/cerrarIcon.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>27</width>
+                 <height>27</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="Main">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QPushButton{
+	color: rgb(255,255,255);
+	border:none;
+}
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QFrame" name="frame">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>0</width>
+            <height>424</height>
+           </rect>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>163</width>
+            <height>424</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">*{
+	color: rgb(255,255,255);
+	background:rgb(15,18,28);
+	border:none;
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:transparent;
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="6" column="0">
+            <widget class="QToolButton" name="toolButton_7">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>src/sideAudaIcon.png</normaloff>src/sideAudaIcon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>163</width>
+               <height>44</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QToolButton" name="toolButton_3">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>src/sideBloqueIcon.png</normaloff>src/sideBloqueIcon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>163</width>
+               <height>44</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QToolButton" name="toolButton_6">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>src/sideFDigitalIcon.png</normaloff>src/sideFDigitalIcon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>163</width>
+               <height>44</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QToolButton" name="toolButton_5">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>src/sideCPublicaIcon.png</normaloff>src/sideCPublicaIcon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>163</width>
+               <height>44</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QToolButton" name="toolButton">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>src/sideInicioIcon.png</normaloff>src/sideInicioIcon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>163</width>
+               <height>44</height>
+              </size>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QToolButton" name="toolButton_2">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>src/sideClasicoIcon.png</normaloff>src/sideClasicoIcon.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>163</width>
+               <height>44</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_3">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>src/sideLogo.png</normaloff>src/sideLogo.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>163</width>
+               <height>142</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+          <zorder>pushButton_3</zorder>
+          <zorder>toolButton_7</zorder>
+          <zorder>toolButton_6</zorder>
+          <zorder>toolButton_3</zorder>
+          <zorder>toolButton_5</zorder>
+          <zorder>toolButton</zorder>
+          <zorder>toolButton_2</zorder>
+         </widget>
+         <widget class="QStackedWidget" name="stackedWidget">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>856</width>
+            <height>424</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	color: rgb(255,255,255);
+	border:none;
+}</string>
+          </property>
+          <property name="currentIndex">
+           <number>6</number>
+          </property>
+          <widget class="QWidget" name="inicio">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QPushButton{
+	color: rgb(255,255,255);
+	border:none;
+}
+</string>
+           </property>
+           <widget class="QFrame" name="frame_5">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>856</width>
+              <height>424</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">
+QToolButton{
+	color: rgb(255,255,255);
+	background:transparent;
+	border:none;
+	border-image:none
+}
+
+
+</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QToolButton" name="toolButton_8">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>src/inicioClasicoIcon.png</normaloff>src/inicioClasicoIcon.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>151</width>
+                 <height>253</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="toolButton_9">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>src/inicioBloqueIcon.png</normaloff>src/inicioBloqueIcon.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>151</width>
+                 <height>253</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="toolButton_10">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>src/inicioClavepublicaIcon.png</normaloff>src/inicioClavepublicaIcon.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>151</width>
+                 <height>253</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="toolButton_11">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>src/inicioFirmadigitalIcon.png</normaloff>src/inicioFirmadigitalIcon.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>151</width>
+                 <height>253</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clasico">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="geometry">
+             <rect>
+              <x>378</x>
+              <y>35</y>
+              <width>101</width>
+              <height>142</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clIcon.png</normaloff>src/ClasicoSrc/clIcon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>101</width>
+              <height>142</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_12">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>200</y>
+              <width>218</width>
+              <height>58</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clDesplazamiento.png</normaloff>src/ClasicoSrc/clDesplazamiento.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>218</width>
+              <height>58</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_13">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>200</y>
+              <width>218</width>
+              <height>58</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clAnalisisVigenere.png</normaloff>src/ClasicoSrc/clAnalisisVigenere.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>218</width>
+              <height>58</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_14">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>200</y>
+              <width>218</width>
+              <height>58</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clPermutacion.png</normaloff>src/ClasicoSrc/clPermutacion.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>218</width>
+              <height>58</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_15">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>280</y>
+              <width>218</width>
+              <height>58</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clTransposicion.png</normaloff>src/ClasicoSrc/clTransposicion.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>218</width>
+              <height>58</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_16">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>280</y>
+              <width>218</width>
+              <height>58</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clSustitucion.png</normaloff>src/ClasicoSrc/clSustitucion.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>218</width>
+              <height>58</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_17">
+            <property name="geometry">
+             <rect>
+              <x>560</x>
+              <y>280</y>
+              <width>218</width>
+              <height>58</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clAfin.png</normaloff>src/ClasicoSrc/clAfin.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>218</width>
+              <height>58</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_18">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>360</y>
+              <width>218</width>
+              <height>58</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClasicoSrc/clHill.png</normaloff>src/ClasicoSrc/clHill.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>218</width>
+              <height>58</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="bloque">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_5">
+            <property name="geometry">
+             <rect>
+              <x>378</x>
+              <y>35</y>
+              <width>101</width>
+              <height>142</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BloqueSrc/blIcon.png</normaloff>src/BloqueSrc/blIcon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>101</width>
+              <height>142</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_19">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>190</y>
+              <width>242</width>
+              <height>104</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BloqueSrc/blSDES.png</normaloff>src/BloqueSrc/blSDES.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>104</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_20">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>190</y>
+              <width>242</width>
+              <height>104</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BloqueSrc/blTDES.png</normaloff>src/BloqueSrc/blTDES.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>104</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_21">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>310</y>
+              <width>242</width>
+              <height>104</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BloqueSrc/blDES.png</normaloff>src/BloqueSrc/blDES.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>104</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_22">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>310</y>
+              <width>242</width>
+              <height>104</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BloqueSrc/blAES.png</normaloff>src/BloqueSrc/blAES.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>104</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clave">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_6">
+            <property name="geometry">
+             <rect>
+              <x>378</x>
+              <y>35</y>
+              <width>101</width>
+              <height>142</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClaveSrc/clIcon.png</normaloff>src/ClaveSrc/clIcon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>101</width>
+              <height>142</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_23">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>220</y>
+              <width>184</width>
+              <height>113</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClaveSrc/clGamal.png</normaloff>src/ClaveSrc/clGamal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>113</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_24">
+            <property name="geometry">
+             <rect>
+              <x>335</x>
+              <y>220</y>
+              <width>184</width>
+              <height>113</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClaveSrc/clRSA.png</normaloff>src/ClaveSrc/clRSA.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>113</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_25">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>220</y>
+              <width>184</width>
+              <height>113</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/ClaveSrc/clRabin.png</normaloff>src/ClaveSrc/clRabin.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>113</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="firma">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_7">
+            <property name="geometry">
+             <rect>
+              <x>378</x>
+              <y>35</y>
+              <width>101</width>
+              <height>142</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/FirmaSrc/fiIcon.png</normaloff>src/FirmaSrc/fiIcon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>101</width>
+              <height>142</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_26">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>220</y>
+              <width>184</width>
+              <height>113</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/FirmaSrc/fiRSA.png</normaloff>src/FirmaSrc/fiRSA.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>113</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_27">
+            <property name="geometry">
+             <rect>
+              <x>335</x>
+              <y>220</y>
+              <width>184</width>
+              <height>113</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/FirmaSrc/fiDSA.png</normaloff>src/FirmaSrc/fiDSA.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>113</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_28">
+            <property name="geometry">
+             <rect>
+              <x>540</x>
+              <y>220</y>
+              <width>184</width>
+              <height>113</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/FirmaSrc/fiGamal.png</normaloff>src/FirmaSrc/fiGamal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>242</width>
+              <height>113</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="ayuda">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+          </widget>
+          <widget class="QWidget" name="clDesplazamiento">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}
+QTextEdit{
+	background:rgb(255,255,255);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_8">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>140</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Desplazamiento.png</normaloff>src/titulos/Desplazamiento.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>140</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_27">
+            <property name="geometry">
+             <rect>
+              <x>49</x>
+              <y>94</y>
+              <width>276</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoDeseado.png</normaloff>src/textoDeseado.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>276</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="despTextoOriginal">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>120</y>
+              <width>271</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="despCifrar">
+            <property name="geometry">
+             <rect>
+              <x>69</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="despDescifrar">
+            <property name="geometry">
+             <rect>
+              <x>195</x>
+              <y>386</y>
+              <width>110</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_28">
+            <property name="geometry">
+             <rect>
+              <x>405</x>
+              <y>97</y>
+              <width>75</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Clave.png</normaloff>src/BotonesGral/Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>44</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_29">
+            <property name="geometry">
+             <rect>
+              <x>566</x>
+              <y>94</y>
+              <width>263</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/textoObtenido.png</normaloff>src/textoObtenido.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>263</width>
+              <height>280</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="despGenerar">
+            <property name="geometry">
+             <rect>
+              <x>358</x>
+              <y>293</y>
+              <width>173</width>
+              <height>64</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Generar  Clave.png</normaloff>src/BotonesGral/Generar  Clave.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>173</width>
+              <height>64</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="cantDesplazamiento">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>190</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(255, 255, 255)</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>365</x>
+              <y>240</y>
+              <width>160</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13)</string>
+            </property>
+            <property name="text">
+             <string>Número entre 0 y 255</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="despCopiar">
+            <property name="geometry">
+             <rect>
+              <x>645</x>
+              <y>386</y>
+              <width>110</width>
+              <height>30</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Copiar.png</normaloff>src/BotonesGral/Copiar.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>110</width>
+              <height>30</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QTextEdit" name="despTextoResult">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>120</y>
+              <width>251</width>
+              <height>251</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_3">
+            <property name="geometry">
+             <rect>
+              <x>335</x>
+              <y>150</y>
+              <width>221</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: white
+</string>
+            </property>
+            <property name="text">
+             <string>Inserte desplazamiento</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clVigenere">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_9">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>78</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Vigenere.png</normaloff>src/titulos/Vigenere.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>78</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clPermutacion">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_10">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>113</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Permutacion.png</normaloff>src/titulos/Permutacion.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>113</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clTransposicion">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_11">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>125</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Transposicion.png</normaloff>src/titulos/Transposicion.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>125</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clSustitucion">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_12">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>99</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Sustitucion.png</normaloff>src/titulos/Sustitucion.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>99</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clAfin">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_13">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>33</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Afin.png</normaloff>src/titulos/Afin.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>33</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clHill">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_14">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>25</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Hill.png</normaloff>src/titulos/Hill.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_29">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>18</y>
+              <width>124</width>
+              <height>35</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Imagen.png</normaloff>src/BotonesGral/Imagen.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>124</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clHillImage">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_25">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>25</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Hill.png</normaloff>src/titulos/Hill.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_30">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>18</y>
+              <width>124</width>
+              <height>35</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Texto.png</normaloff>src/BotonesGral/Texto.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>124</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="blSdes">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_15">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>53</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/SDes.png</normaloff>src/titulos/SDes.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>53</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="blTdes">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_16">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>52</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/TDes.png</normaloff>src/titulos/TDes.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>52</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="blDes">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_17">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>32</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Des.png</normaloff>src/titulos/Des.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>32</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="blAes">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_18">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>32</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Aes.png</normaloff>src/titulos/Aes.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>32</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_31">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>18</y>
+              <width>124</width>
+              <height>35</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Imagen.png</normaloff>src/BotonesGral/Imagen.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>124</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="blAesImage">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QToolButton" name="toolButton_32">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>18</y>
+              <width>124</width>
+              <height>35</height>
+             </rect>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/BotonesGral/Texto.png</normaloff>src/BotonesGral/Texto.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>124</width>
+              <height>35</height>
+             </size>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_26">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>32</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Aes.png</normaloff>src/titulos/Aes.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>32</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clRsa">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_19">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>33</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/RSA.png</normaloff>src/titulos/RSA.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>33</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clRabin">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_20">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>48</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/Rabin.png</normaloff>src/titulos/Rabin.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>48</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="clGamal">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_21">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>29</y>
+              <width>74</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/ElGamal.png</normaloff>src/titulos/ElGamal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>74</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="fiRsa">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_22">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>33</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/RSA.png</normaloff>src/titulos/RSA.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>33</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="fiDsa">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_23">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>34</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/DSA.png</normaloff>src/titulos/DSA.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>34</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="fiGamal">
+           <property name="styleSheet">
+            <string notr="true">*{
+	background-color: rgb(22,30,56);
+}
+QToolButton{
+	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;
+}
+QToolButton:hover{
+	background:rgb(33,38,52);
+	border:none;
+}</string>
+           </property>
+           <widget class="QPushButton" name="pushButton_24">
+            <property name="geometry">
+             <rect>
+              <x>97</x>
+              <y>28</y>
+              <width>74</width>
+              <height>19</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>src/titulos/ElGamal.png</normaloff>src/titulos/ElGamal.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>74</width>
+              <height>19</height>
+             </size>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <zorder>stackedWidget</zorder>
+         <zorder>frame</zorder>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="Footer">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">	color: rgb(255,255,255);
+	background:rgb(10,12,18);
+	border:none;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="source_image.qrc"/>
+ </resources>
+ <connections/>
+</ui>
