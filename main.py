@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets, uic, QtCore
 import sys
+import pyperclip as clipboard
 import clasico
 
 class MainGui(QtWidgets.QMainWindow):
@@ -91,11 +92,15 @@ class MainGui(QtWidgets.QMainWindow):
         self.pushButton_7.mousePressEvent = self.Side_Menu_Def_1
 
 ##==========================================Conectar botones===========================================================
+##Desplazamiento========================================================================================================
         self.despCifrar.clicked.connect(self.desplazamientoCifrar)
         self.despDescifrar.clicked.connect(self.desplazamientoDescifrar)
         self.despGenerar.clicked.connect(self.desplazamientoGenerarClave)
+        self.despCopiar.clicked.connect(self.vigenereCopiar)
+##Vigenere========================================================================================================
 ##=======================================================================================================================
-
+        self.vigDescifrar.clicked.connect(self.analisisVigenere)
+        self.vigCopiar.clicked.connect(self.vigenereCopiar)
 ##=======================================================================================================================        
 ##=====================================FUNCIONES DE BOTONES Y CAMPOS DE TEXTO============================================
 ##=======================================================================================================================
@@ -116,10 +121,21 @@ class MainGui(QtWidgets.QMainWindow):
     def desplazamientoGenerarClave(self):
         self.cantDesplazamiento.clear()
         despl=clasico.Desplazamiento.clave()
-        self.cantDesplazamiento.insert(str(despl))    
+        self.cantDesplazamiento.insert(str(despl))
+    def desplazamientoCopiar(self):
+        clipboard.copy(self.despTextoResult.toPlainText())
+
 ##=======================================================================================================================
 
 ##Vigenere=========================================================================================================
+    def analisisVigenere(self):
+        (clave,texto) = clasico.Vigenere.analisis(self.vigTextoOriginal.toPlainText())
+        self.vigTextoResult.clear()
+        self.vigClave.clear()
+        self.vigTextoResult.insertPlainText(texto)
+        self.vigClave.insert(clave)
+    def vigenereCopiar(self):
+        clipboard.copy(self.vigTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##Permutacion=========================================================================================================
