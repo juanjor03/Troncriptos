@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets, uic, QtCore
 import sys
 import pyperclip as clipboard
 import clasico,bloque,clavePublica,firmaDigital
+import collections,re
 
 class MainGui(QtWidgets.QMainWindow):
     def __init__(self):
@@ -100,11 +101,19 @@ class MainGui(QtWidgets.QMainWindow):
 ##Vigenere========================================================================================================
         self.vigDescifrar.clicked.connect(self.analisisVigenere)
         self.vigCopiar.clicked.connect(self.vigenereCopiar)
-##Permutacion========================================================================================================
+##Permutacion(VERNAM)========================================================================================================
+        self.permCifrar.clicked.connect(self.vernamCifrar)
+        self.permDescifrar.clicked.connect(self.vernamDescifrar)
+        self.permGenerar.clicked.connect(self.vernamGenerarClave)
         self.permCopiar.clicked.connect(self.permutacionCopiar)
 ##Transposicion========================================================================================================
+        self.transCifrar.clicked.connect(self.transposicionCifrar)
+        self.transDescifrar.clicked.connect(self.transposicionDescifrar)
+        self.transGenerar.clicked.connect(self.transposicionGenerarClave)
         self.transCopiar.clicked.connect(self.transposicionCopiar)
 ##Sustitucion========================================================================================================
+        self.susAnalizar.clicked.connect(self.sustitucionAnalisis)
+        self.susDescifrar.clicked.connect(self.sustitucionDescifrar)
         self.susCopiar.clicked.connect(self.sustitucionCopiar)
 ##Afin========================================================================================================
         self.afinCopiar.clicked.connect(self.afinBCopiar)
@@ -169,17 +178,63 @@ class MainGui(QtWidgets.QMainWindow):
         clipboard.copy(self.vigTextoResult.toPlainText())
 ##=======================================================================================================================
 
-##Permutacion=========================================================================================================
+##Permutacion(VERNAM)=========================================================================================================
+    def vernamCifrar(self):
+        if(len(self.permTextoOriginal.toPlainText())==len(self.verClave.text())):
+            textoVer=clasico.Vernam.cifrar(self.permTextoOriginal.toPlainText(),self.verClave.text())
+            self.permTextoResult.clear()
+            self.permTextoResult.insertPlainText(textoVer)
+    def vernamDescifrar(self):
+        if(len(self.permTextoOriginal.toPlainText())==len(self.verClave.text())):
+            textoDescVer=clasico.Vernam.descifrar(self.permTextoOriginal.toPlainText(),self.verClave.text())
+            self.permTextoResult.clear()
+            self.permTextoResult.insertPlainText(textoDescVer)        
+    def vernamGenerarClave(self):
+        self.verClave.clear()
+        clave=clasico.Vernam.clave(len(self.permTextoOriginal.toPlainText()))
+        self.verClave.insert(str(clave))
     def permutacionCopiar(self):
         clipboard.copy(self.permTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##Transposicion=========================================================================================================
+    def transposicionCifrar(self):
+        if(self.transTextoOriginal.toPlainText()!=""):
+            if(self.transClave.text()!=""):
+                self.transTextoResult.clear()
+                textoTrans= clasico.Transposicion.cifrar(self.transTextoOriginal.toPlainText(),self.transClave.text())
+                self.transTextoResult.insertPlainText(textoTrans)    
+    def transposicionDescifrar(self):
+        if(self.transTextoOriginal.toPlainText()!=""):
+            if(self.transClave.text()!=""):
+                self.transTextoResult.clear()
+                textoTrans= clasico.Transposicion.descifrar(self.transTextoOriginal.toPlainText(),self.transClave.text())
+                self.transTextoResult.insertPlainText(textoTrans)    
+    def transposicionGenerarClave(self):
+        self.transClave.clear()
+        clave=clasico.Transposicion.clave(len(self.transTextoOriginal.toPlainText()))
+        self.transClave.insert(str(clave))
     def transposicionCopiar(self):
         clipboard.copy(self.transTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##Sustitucion=========================================================================================================
+    def sustitucionAnalisis(self):
+        (alfabeto,digramas,trigramas) = clasico.Sustitucion.analisis(str(self.susTextoOriginal.toPlainText()))
+        self.letrasFrec.clear()
+        self.digramas.clear()
+        self.trigramas.clear()
+        self.letrasFrec.insert(alfabeto)
+        self.digramas.insert(digramas)
+        self.trigramas.insert(trigramas)
+    def sustitucionDescifrar(self):
+        if self.susClave.text() == '':
+            self.susClave.clear()
+            clave=clasico.Sustitucion.clave(str(self.susTextoOriginal.toPlainText()))
+            self.susClave.insert(str(clave))
+        self.susTextoResult.clear()
+        textoSus=clasico.Sustitucion.descifrar(self.susTextoOriginal.toPlainText(),self.susClave.text())
+        self.susTextoResult.insertPlainText(textoSus)
     def sustitucionCopiar(self):
         clipboard.copy(self.susTextoResult.toPlainText())
 ##=======================================================================================================================
