@@ -1,8 +1,15 @@
 from PyQt5 import QtWidgets, uic, QtCore
+from PyQt5.QtWidgets import QFileDialog
+from PyQt5.QtGui import QImage
+from PyQt5 import QtGui
+import numpy as np
+import imageio
+import cv2
+import imutils
 import sys
 import pyperclip as clipboard
 import clasico,bloque,clavePublica,firmaDigital
-import collections,re
+import collections,re,math
 
 class MainGui(QtWidgets.QMainWindow):
     def __init__(self):
@@ -116,10 +123,18 @@ class MainGui(QtWidgets.QMainWindow):
         self.susDescifrar.clicked.connect(self.sustitucionDescifrar)
         self.susCopiar.clicked.connect(self.sustitucionCopiar)
 ##Afin========================================================================================================
+        self.afinCifrar.clicked.connect(self.afCifrar)
+        self.afinDescifrar.clicked.connect(self.afDescifrar)
+        self.afinGenerar.clicked.connect(self.afGenerarClave)
         self.afinCopiar.clicked.connect(self.afinBCopiar)
 ##Hill========================================================================================================
+        self.hilCifrar.clicked.connect(self.hilTextoCifrar)
+        self.hilDescifrar.clicked.connect(self.hilTextoDescifrar)
+        self.hilGenerar.clicked.connect(self.hilTextoGenerarClave)
         self.hilCopiar.clicked.connect(self.hillTextoCopiar)
 ##HillImage========================================================================================================
+        self.hilImageCifrar.clicked.connect(self.hilImgCifrar)
+        self.hilImageDescifrar.clicked.connect(self.hilImgDescifrar)
 ##Sdes========================================================================================================
         self.sdesCopiar.clicked.connect(self.sDesTextoCopiar)
 ##Tdes========================================================================================================  
@@ -240,16 +255,113 @@ class MainGui(QtWidgets.QMainWindow):
 ##=======================================================================================================================
 
 ##Afin=========================================================================================================
+    def maximo_comun_divisor(self,a,b):
+        temporal = 0
+        while b != 0:
+            temporal = b
+            b = a % b
+            a = temporal
+        return a
+    def afCifrar(self):
+        if(self.afinClave.text()!=""):
+                clave=self.afinClave.text()
+                claveLst=clave.split(sep=',')
+                claveA=int(claveLst[0])
+                claveB=int(claveLst[1])
+
+                if(self.maximo_comun_divisor(claveA,26) == 1):
+                    self.afinTextoResult.clear()
+                    textoAfin= clasico.Afin.cifrar(self.afinTextoOriginal.toPlainText(),claveA,claveB)
+                    self.afinTextoResult.insertPlainText(textoAfin) 
+    def afDescifrar(self):
+        if(self.afinClave.text()!=""):
+                clave=self.afinClave.text()
+                claveLst=clave.split(sep=',')
+                claveA=int(claveLst[0])
+                claveB=int(claveLst[1])
+
+                if(self.maximo_comun_divisor(claveA,26) == 1):
+                    self.afinTextoResult.clear()
+                    textoAfin= clasico.Afin.descifrar(self.afinTextoOriginal.toPlainText(),claveA,claveB)
+                    self.afinTextoResult.insertPlainText(textoAfin) 
+    def afGenerarClave(self):
+        self.afinClave.clear()
+        (claveA,claveB)=clasico.Afin.clave()
+        self.afinClave.insert(str(claveA)+','+str(claveB))
     def afinBCopiar(self):
         clipboard.copy(self.afinTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##HillTexto=========================================================================================================
+    def hilTextoCifrar(self):
+        if (self.hilTextoOriginal.toPlainText()!=''):
+            if(self.hilClave.text()!=""):
+                    clave=self.hilClave.text()
+                    self.hilTextoResult.clear()
+                    textoHil= clasico.HillTexto.cifrar(self.hilTextoOriginal.toPlainText(),clave)
+                    self.hilTextoResult.insertPlainText(textoHil) 
+    
+    def hilTextoDescifrar(self):
+        if(self.hilClave.text()!=""):
+                clave=self.hilClave.text()
+                self.hilTextoResult.clear()
+                textoHil= clasico.HillTexto.descifrar(self.hilTextoOriginal.toPlainText(),clave)
+                self.hilTextoResult.insertPlainText(textoHil) 
+
+    def hilTextoGenerarClave(self):
+        if(self.tamMatriz.text() ==''):
+            clave=clasico.HillTexto.claveNoLong(int(len(self.hilTextoOriginal.toPlainText())))
+            self.hilClave.clear()
+            self.hilClave.insert(clave) 
+        else:
+            clave=clasico.HillTexto.clave(int(self.tamMatriz.text()))
+            self.hilTClave.clear()
+            self.hilClave.insert(clave)
+        return clave
     def hillTextoCopiar(self):
         clipboard.copy(self.hilTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##HillImagen=========================================================================================================
+
+    def hilCargarImagen(self):
+        self.filename = QFileDialog.getOpenFileName(filter="Image (*.*)")[0]
+        self.image = cv2.imread(self.filename)
+        self.setPhoto(self.image)
+        return(self.filename)
+    def hilCargarImagen2(self,filename):
+        self.image = cv2.imread(filename)
+        self.setPhoto2(self.image)
+    def hilCargarImagen3(self):
+        self.filename = QFileDialog.getOpenFileName(filter="Image (*.*)")[0]
+        self.image = cv2.imread(self.filename)
+        return(self.filename)
+    def setPhoto(self,image):
+        self.tmp = image
+        image=imutils.resize(image, width=251)
+        frame = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image= QImage(frame, frame.shape[1],frame.shape[0],frame.strides[0],QImage.Format_RGB888)
+        self.imagenCarga.setPixmap(QtGui.QPixmap.fromImage(image))
+    def setPhoto2(self,image):
+        self.tmp = image
+        image=imutils.resize(image, width=251)
+        frame =cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image= QImage(frame, frame.shape[1],frame.shape[0],frame.strides[0],QImage.Format_RGB888)
+        self.imagenCarga_2.setPixmap(QtGui.QPixmap.fromImage(image))
+
+
+    def hilImgCifrar(self):
+        path=self.hilCargarImagen()
+        clasico.HillImage.cifrar(path)   
+        self.hilCargarImagen2('src/Prueba/Encrypted.png') 
+
+    def hilImgDescifrar(self):
+        path=self.hilCargarImagen()
+        clave=self.hilCargarImagen3()
+        clasico.HillImage.descifrar(path,clave)
+        self.hilCargarImagen2('src/Prueba/Decrypted.png')
+
+
 ##=======================================================================================================================
 
 ##Sdes=========================================================================================================

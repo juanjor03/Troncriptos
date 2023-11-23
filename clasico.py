@@ -1,4 +1,10 @@
 import random,math,collections,re
+import numpy
+from numpy.linalg import det
+from numpy import zeros,array
+import sys,pickle
+import scipy.misc
+import imageio
 
 class Desplazamiento:
     def cifrar(texto,desplazamiento):
@@ -17,6 +23,49 @@ class Desplazamiento:
         return(random.randint(0,255))
     
 #============================================================================
+
+class Afin:
+    def euclidian(x,y):
+        w,z,u,v=0,1,1,0
+        while(x != 0):
+            q,r=y//x , y%x
+            m,n = w-u*q, z-v*q
+            y,x,w,z,u,v=x,r,u,v,m,n
+        gcd=y
+        return(gcd,w,z)
+        
+    def moduloInverso(x,m):
+        gcd,w,z=Afin.euclidian(x,m)
+        if gcd!=1:
+            return None
+        else:
+            return w%m
+        
+    def cifrar(texto,claveA,claveB):
+        cifrado=''
+        for i in range(len(texto)):
+            if(texto[i]!=' '):
+                cifrado+=''.join([chr((claveA*(ord(texto[i])-65)+claveB)%26 + 65)])
+            else:
+                cifrado+=' '
+        return cifrado
+    
+    def descifrar(texto,claveA,claveB):
+        descifrado=''
+        for i in range(len(texto)):
+            if(texto[i]!=' '):
+                descifrado+=''.join([chr((Afin.moduloInverso(claveA,26)*((ord(texto[i])-65)-claveB))%26 + 65)])
+            else:
+                descifrado+=' '
+        
+        return descifrado
+    
+    def clave():
+        a=random.choice([i for i in range(0,26) if i not in [0,2,4,6,8,10,12,13,14,16,18,20,22,24]])
+        b=random.randint(0,25)
+        return(a,b)
+
+#============================================================================    
 
 class Vernam:
     
@@ -300,8 +349,243 @@ class Sustitucion:
         return descifrado
 
 #============================================================================
+
+class HillTexto:
+    def gcd(a,b): #Euclid algorithm,return greatest common divisor od 2 positive integers
+        while b:
+            a, b= b, a%b
+        return a
+        
+    def modInverse(a, m) :
+        if(HillTexto.gcd(a,m) != 1) or ((m == 1)): 
+            return 0
+        m0 = m 
+        y = 0
+        x = 1
+        while (a > 1) : 
+        # q is quotient 
+            q = a // m 
+            t = m 
+        #m is remainder , now process the same as Euclid's algorithm
+            m = a % m 
+            a = t 
+            t = y 
+        # update x and y 
+            y = x - q * y 
+            x = t 
+    #to make x positive 
+        if (x < 0) : 
+            x = x + m0 
+        return x
+            
+    def multiplicarVector(parcial,matriz,n):
+        parcialCifrado=''
+        vector=numpy.zeros((n,1))
+        for i in range(n):
+            vector[i][0]=ord(parcial[i])-65
+        multiplicacion=numpy.dot(matriz,vector)
+        for i in range(n):
+            letra=chr(int((multiplicacion[i][0])%26)+65)
+            parcialCifrado+=''.join(letra)
+        return parcialCifrado
+        
+    def cifrar(texto,clave):
+        n=int(math.sqrt(len(clave)))
+        matriz=numpy.zeros(shape=(n,n))
+        k=0
+        for i in range(n):
+            for j in range(n):
+                matriz[i][j]=(ord(clave[k])-65)%26
+                k+=1
+        cifrado=''
+        numbloques=math.ceil(len(texto)/n)
+        if(numbloques*n != len(texto)):
+            ad=(numbloques*n)%len(texto)
+            for i in range(ad):
+                texto+=''.join('A')
+        for i in range(numbloques):
+            ci=HillTexto.multiplicarVector(texto[i*n:(i+1)*n],matriz,n)
+            cifrado+=''.join(ci)
+        return cifrado
+
+    def descifrar(texto,clave):
+        n=int(math.sqrt(len(clave)))
+        matriz=numpy.zeros(shape=(n,n))
+        k=0
+        for i in range(n):
+            for j in range(n):
+                matriz[i][j]=(ord(clave[k])-65)%26
+                k+=1
+        matriz=HillTexto.invertirMatriz(matriz)
+        descifrado=''
+        numbloques=math.ceil(len(texto)/n)
+        if(numbloques*n != len(texto)):
+            ad=(numbloques*n)%len(texto)
+            for i in range(ad):
+                texto+=''.join('A')
+        for i in range(numbloques):
+            desci=HillTexto.multiplicarVector(texto[i*n:(i+1)*n],matriz,n)
+            descifrado+=''.join(desci)
+        return descifrado
+        
+    def minor(A,i,j):
+        A = array(A)
+        n = len(A)
+        minor = zeros((n-1,n-1),dtype = int) #for problems in cryptography integers are used
+        p = 0
+        for s in range(0,n-1):
+            if p == i:
+                p = p+1
+            q = 0
+            for t in range(0,n-1):
+                if q == j:
+                    q = q+1
+                minor[s][t] = A[p][q]
+                q = q+1
+            p = p+1
+        return minor
+    
+    def invertirMatriz(A):
+        m=26
+        n = len(A)
+        for i in range(0,n):
+            for j in range(0,n):
+                A[i][j] = (A[i][j] % m)
+        d = int(round(det(A)) % m)
+        adj = zeros((n,n),dtype = int)
+        for i in range(n):
+            for j in range(n):
+                M = HillTexto.minor(A,i,j)
+                adj[j][i] = int((round(det(M)) % m))
+                if (i+1+j+1)%2 == 1:
+                    adj[j][i] = (-1*adj[j][i]) % 26
+        return ((HillTexto.modInverse(d,m)*adj) % m)
+        
+    def crearMatriz(n):
+        matriz=numpy.zeros(shape=(n,n))
+        for i in range(n):
+            for j in range(n):
+                matriz[i][j]=random.randint(0,25)
+        return matriz
+        
+    ##clave con un tamaño de matriz dado    
+    def clave(n):
+        m=26
+        clave=''
+        inv=True
+        matriz=HillTexto.crearMatriz(n)
+        while inv:
+            matriz=HillTexto.crearMatriz(n)
+            d = int(round(det(matriz)) % m)
+            gcd=HillTexto.gcd(d,m)
+            if(gcd==1):
+                inv=False
+        for i in range(n):
+            for j in range(n):
+                clave+=chr(int(matriz[i][j]) + 65)                
+        return clave
+        
+    ##clave con un tamaño de matriz no dado     
+    def claveNoLong(longTexto):
+        m=26
+        n=math.ceil(math.sqrt(longTexto))
+        clave=''
+        inv=True
+        matriz=HillTexto.crearMatriz(n)
+        while inv:
+            matriz=HillTexto.crearMatriz(n)
+            d = int(round(det(matriz)) % m)
+            gcd=HillTexto.gcd(d,m)
+            if(gcd==1):
+                inv=False
+                
+        for i in range(n):
+            for j in range(n):
+                clave+=chr(int(matriz[i][j]) + 65)
+        return clave
+
+
+
 #============================================================================
-#============================================================================
-#============================================================================
-#============================================================================
-#============================================================================
+class HillImage:
+    def cifrar(file):
+
+        img = imageio.imread(file, pilmode="RGB")
+        l = img.shape[0]
+        w = img.shape[1]
+        n = max(l,w)
+
+        if n%2:
+            n = n + 1
+        img2 = numpy.zeros((n,n,3))
+        img2[:l,:w,:] += img 
+        Mod = 256
+        k = 23 
+
+        d = numpy.random.randint(256, size = (int(n/2),int(n/2)))         
+        I = numpy.identity(int(n/2))                                     
+        a = numpy.mod(-d,Mod)                                             
+        b = numpy.mod((k * numpy.mod(I - a,Mod)),Mod)                     
+        k = numpy.mod(numpy.power(k,127),Mod)                        
+        c = numpy.mod((I + a),Mod)                                        
+        c = numpy.mod(c * k, Mod)
+
+        A1 = numpy.concatenate((a,b), axis = 1)
+        A2 = numpy.concatenate((c,d), axis = 1)
+        A = numpy.concatenate((A1,A2), axis = 0)
+        Test = numpy.mod(numpy.matmul(numpy.mod(A,Mod),numpy.mod(A,Mod)),Mod)
+
+        key = numpy.zeros((n + 1, n))
+        key[:n, :n] += A
+
+        key[-1][0] = int(l / Mod)
+        key[-1][1] = l % Mod
+        key[-1][2] = int(w / Mod)
+        key[-1][3] = w % Mod
+        key=key.astype(numpy.uint8)
+        imageio.imwrite("src/Prueba/Key.png", key)
+
+        Enc1 = (numpy.matmul(A % Mod,img2[:,:,0] % Mod)) % Mod
+        Enc2 = (numpy.matmul(A % Mod,img2[:,:,1] % Mod)) % Mod
+        Enc3 = (numpy.matmul(A % Mod,img2[:,:,2] % Mod)) % Mod
+
+        Enc1 = Enc1.astype(numpy.uint8)
+        Enc2 = Enc2.astype(numpy.uint8)
+        Enc3 = Enc3.astype(numpy.uint8)
+
+        Enc1 = numpy.expand_dims(Enc1, axis=2)
+        Enc2 = numpy.expand_dims(Enc2, axis=2)
+        Enc3 = numpy.expand_dims(Enc3, axis=2)
+
+        Enc = numpy.concatenate((Enc1,Enc2,Enc3), axis = 2)              
+        imageio.imwrite('src/Prueba/Encrypted.png',Enc)
+    
+    def descifrar(imagen,clave):
+        Mod = 256
+        Enc = imageio.imread(imagen) 
+
+        A = imageio.imread(clave)
+        l = A[-1][0] * Mod + A[-1][1]
+        w = A[-1][2] * Mod + A[-1][3]
+        A = A[0:-1]
+    
+        Dec1 = (numpy.matmul(A % Mod,Enc[:,:,0] % Mod)) % Mod
+        Dec2 = (numpy.matmul(A % Mod,Enc[:,:,1] % Mod)) % Mod
+        Dec3 = (numpy.matmul(A % Mod,Enc[:,:,2] % Mod)) % Mod
+
+
+        Dec1 = Dec1.astype(numpy.uint8)
+        Dec2 = Dec2.astype(numpy.uint8)
+        Dec3 = Dec3.astype(numpy.uint8)
+
+    # Agregar una dimensión a cada matriz
+        Dec1 = numpy.expand_dims(Dec1, axis=2)
+        Dec2 = numpy.expand_dims(Dec2, axis=2)
+        Dec3 = numpy.expand_dims(Dec3, axis=2)
+        Dec = numpy.concatenate((Dec1,Dec2,Dec3), axis = 2)               
+
+
+        Final = Dec[:l,:w,:]
+
+        imageio.imwrite('src/Prueba/Decrypted.png',Final)
+
