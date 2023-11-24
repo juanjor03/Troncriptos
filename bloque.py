@@ -5,6 +5,8 @@ from PIL import Image
 from PIL import ImageOps
 from secrets import token_bytes
 import random
+from Crypto.Cipher import DES
+from base64 import b64encode, b64decode
 
 #===========================================================================
 class DES:
