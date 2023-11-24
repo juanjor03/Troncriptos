@@ -7,6 +7,25 @@ from secrets import token_bytes
 import random
 
 #===========================================================================
+class DES:
+ def verificar_texto(texto):
+    	return texto + (8 - len(texto) % 8) * b'\0'
+	
+ def cifrar(clave, texto):
+    clave = clave.ljust(8, b'\0')[:8]
+    cipher = DES.new(clave, DES.MODE_ECB)
+    padded_plaintext = verificar_texto(texto.encode('utf-8'))
+    ciphertext = cipher.encrypt(padded_plaintext)
+    return b64encode(ciphertext).decode('utf-8')	
+ 
+ def descifrar(clave, texto):
+    clave = clave.ljust(8, b'\0')[:8]
+    cipher = DES.new(clave, DES.MODE_ECB)
+    decrypted_text = cipher.decrypt(b64decode(texto.encode('utf-8')))
+    return decrypted_text.rstrip(b'\0').decode('utf-8')
+ 
+ def clave():
+    return(get_random_bytes(8))
 #============================================================================
 #============================================================================
 #============================================================================
