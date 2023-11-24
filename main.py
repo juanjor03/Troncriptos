@@ -2,14 +2,12 @@ from PyQt5 import QtWidgets, uic, QtCore
 from PyQt5.QtWidgets import QFileDialog
 from PyQt5.QtGui import QImage
 from PyQt5 import QtGui
-import numpy as np
-import imageio
 import cv2
 import imutils
-import sys
+import sys,math
 import pyperclip as clipboard
 import clasico,bloque,clavePublica,firmaDigital
-import collections,re,math
+from Cryptodome.PublicKey import RSA
 
 class MainGui(QtWidgets.QMainWindow):
     def __init__(self):
@@ -144,11 +142,23 @@ class MainGui(QtWidgets.QMainWindow):
 ##Aes========================================================================================================
         self.aesCopiar.clicked.connect(self.aesTextoCopiar)
 ##AesImage========================================================================================================
+        self.aesImageGenerar.clicked.connect(self.aesImageGenerarClave)
+        self.aesImageDescifrar.clicked.connect(self.aesImgDescifrar)
+        self.aesImageCifrar.clicked.connect(self.aesImgCifrar)
 ##Rsa========================================================================================================
+        self.rsaCifrar.clicked.connect(self.rsaBCifrar)
+        self.rsaDescifrar.clicked.connect(self.rsaBDescifrar)
+        self.rabGenerar.clicked.connect(self.rsaBGenerar)
         self.rsaCopiar.clicked.connect(self.rsaBCopiar)
 ##Rabin========================================================================================================
+        self.rabCifrar.clicked.connect(self.rabinCifrar)
+        self.rabDescifrar.clicked.connect(self.rabinDescifrar)
+        self.rabGenerar.clicked.connect(self.rabinGenerar)
         self.rabCopiar.clicked.connect(self.rabinCopiar)
 ##Gamal========================================================================================================
+        self.gamCifrar.clicked.connect(self.gamalCifrar)
+        self.gamDescifrar.clicked.connect(self.gamalDescifrar)
+        self.gamGenerar.clicked.connect(self.gamalGenerar)
         self.gamCopiar.clicked.connect(self.gamalCopiar)
 ##FirmaDigitalRsa========================================================================================================
         self.fiRsaCopiar.clicked.connect(self.firmaDigitalRsaCopiar)
@@ -315,9 +325,8 @@ class MainGui(QtWidgets.QMainWindow):
             self.hilClave.insert(clave) 
         else:
             clave=clasico.HillTexto.clave(int(self.tamMatriz.text()))
-            self.hilTClave.clear()
+            self.hilClave.clear()
             self.hilClave.insert(clave)
-        return clave
     def hillTextoCopiar(self):
         clipboard.copy(self.hilTextoResult.toPlainText())
 ##=======================================================================================================================
@@ -384,22 +393,197 @@ class MainGui(QtWidgets.QMainWindow):
         clipboard.copy(self.aesTextoResult.toPlainText())
 ##=======================================================================================================================
 
-##AesImagen=========================================================================================================
+##AesImagen============================================================================================================
+    def aesCargarImagen(self):
+        self.filename = QFileDialog.getOpenFileName(filter="Image (*.*)")[0]
+        self.image = cv2.imread(self.filename)
+        self.setPhotoAes(self.image)
+        return(self.filename)
+    def aesCargarImagen2(self,filename):
+        self.image = cv2.imread(filename)
+        self.setPhotoAes2(self.image)
+    def setPhotoAes(self,image):
+        self.tmp = image
+        image=imutils.resize(image, width=251)
+        frame = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image= QImage(frame, frame.shape[1],frame.shape[0],frame.strides[0],QImage.Format_RGB888)
+        self.imagenCarga_3.setPixmap(QtGui.QPixmap.fromImage(image))
+    def setPhotoAes2(self,image):
+        self.tmp = image
+        image=imutils.resize(image, width=251)
+        frame =cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        image= QImage(frame, frame.shape[1],frame.shape[0],frame.strides[0],QImage.Format_RGB888)
+        self.imagenCarga_4.setPixmap(QtGui.QPixmap.fromImage(image))
+
+
+    def aesImgCifrar(self):
+        path=self.aesCargarImagen()
+        modo=self.aesImageModo.currentText()
+        if(modo=='CBC'):
+            claveIv=self.claveAesImage.text()
+            claveIvLst=claveIv.split(sep=',')
+            clave=claveIvLst[0].encode('utf-8')
+            iv=claveIvLst[1].encode('utf-8')
+            bloque.AesImage.cifrarCBC(path,clave,iv)
+        elif(modo=='ECB'):
+            clave=self.claveAesImage.text()
+            bloque.AesImage.cifrarECB(path,clave)
+        elif(modo=='OFB'):
+            claveIv=self.claveAesImage.text()
+            claveIvLst=claveIv.split(sep=',')
+            clave=claveIvLst[0].encode('utf-8')
+            iv=claveIvLst[1].encode('utf-8')
+            bloque.AesImage.cifrarOFB(path,clave,iv)
+        elif(modo=='CTR'):
+            claveIv=self.claveAesImage.text()
+            claveIvLst=claveIv.split(sep=',')
+            clave=claveIvLst[0].encode('utf-8')
+            iv=claveIvLst[1].encode('utf-8')
+            bloque.AesImage.cifrarCTR(path,clave,iv)
+        self.aesCargarImagen2('src/Prueba/AesEncrypted.png')
+    def aesImgDescifrar(self):
+        path=self.aesCargarImagen()
+        modo=self.aesImageModo.currentText()
+        if(modo=='CBC'):
+            claveIv=self.claveAesImage.text()
+            claveIvLst=claveIv.split(sep=',')
+            clave=claveIvLst[0].encode('utf-8')
+            iv=claveIvLst[1].encode('utf-8')
+            bloque.AesImage.descifrarCBC(path,clave,iv)
+        elif(modo=='ECB'):
+            clave=self.claveAesImage.text()
+            bloque.AesImage.descifrarECB(path,clave)
+        elif(modo=='OFB'):
+            claveIv=self.claveAesImage.text()
+            claveIvLst=claveIv.split(sep=',')
+            clave=claveIvLst[0].encode('utf-8')
+            iv=claveIvLst[1].encode('utf-8')
+            bloque.AesImage.descifrarOFB(path,clave,iv)
+        elif(modo=='CTR'):
+            claveIv=self.claveAesImage.text()
+            claveIvLst=claveIv.split(sep=',')
+            clave=claveIvLst[0].encode('utf-8')
+            iv=claveIvLst[1].encode('utf-8')
+            bloque.AesImage.descifrarCTR(path,clave,iv)
+        self.aesCargarImagen2('src/Prueba/AesDecrypted.png')
+    def aesImageGenerarClave(self):
+        self.claveAesImage.clear()
+        modo=self.aesImageModo.currentText()
+        if(modo=='CBC'):
+            clave,iv = bloque.AesImage.GenerarClaveIv()
+            self.claveAesImage.insert(clave.decode('utf-8')+','+ iv.decode('utf-8'))
+        elif(modo=='ECB'):
+            clave=bloque.AesImage.GenerarClave()
+            self.claveAesImage.insert(clave.decode('utf-8'))
+        elif(modo=='OFB'):
+            clave,iv = bloque.AesImage.GenerarClaveIv()
+            self.claveAesImage.insert(clave.decode('utf-8')+','+ iv.decode('utf-8'))
+        elif(modo=='CTR'):
+            clave,iv=bloque.AesImage.GenerarClaveCtr()
+            self.claveAesImage.insert(clave.decode('utf-8')+','+ iv.decode('utf-8'))
+        
 ##=======================================================================================================================
 
-##Rsa(clave)=========================================================================================================
+##Rsa(clave)========================================================================================================= 
+    def rsaBDescifrar(self):
+        clavePath='src/Prueba/clave.pem'
+        with open(clavePath,'r') as file:
+            claveStr=file.read()
+        clave=RSA.import_key(claveStr.encode('utf-8'))
+        self.rsaTextoResult.clear()
+        texto=clavePublica.ClavePublicaRsa.descifrar(self.rsaTextoOriginal.toPlainText(),clave)
+        self.rsaTextoResult.insertPlainText(texto)
+
+    def rsaBCifrar(self):
+        clavePath='src/Prueba/clave.pem'
+        with open(clavePath,'r') as file:
+            claveStr=file.read()
+        clave=RSA.import_key(claveStr.encode('utf-8'))
+        self.rsaTextoResult.clear()
+        texto=clavePublica.ClavePublicaRsa.cifrar(self.rsaTextoOriginal.toPlainText(),clave)
+        self.rsaTextoResult.insertPlainText(texto)
+
+    def rsaBGenerar(self):
+        clave=clavePublica.ClavePublicaRsa.clave()
+        claveStr=clave.export_key().decode('utf-8')
+        clavePath='src/Prueba/clave.pem'
+        with open(clavePath,'w') as file:
+            file.write(claveStr)
+
     def rsaBCopiar(self):
         clipboard.copy(self.rsaTextoResult.toPlainText())
 ##=======================================================================================================================
 
-##Rabin=========================================================================================================
-    def rabinCopiar(self):
-        clipboard.copy(self.rabTextoResult.toPlainText())
-##=======================================================================================================================
-
 ##Gamal(clave)=========================================================================================================
+
+    def gamalDescifrar(self):
+        clave=self.claveGamalPrivada.text()
+        claveLst=clave.split(sep=',')
+        a=int(claveLst[0])
+        p=int(claveLst[1])
+        self.gamTextoResult.clear()
+        cifrado=self.gamTextoOriginal.toPlainText()
+        cifradoLst=cifrado.split(sep=',')
+        y1str=cifradoLst[0]
+        y2str=cifradoLst[1]
+        texto=clavePublica.ClavePublicaElGamal.descifrar(y1str,y2str,a,p)
+        self.gamTextoResult.clear()
+        self.gamTextoResult.insertPlainText(texto)
+
+    def gamalCifrar(self):
+        clave=self.claveGamalPublica.text()
+        claveLst=clave.split(sep=',')
+        g=int(claveLst[0])
+        p=int(claveLst[1])
+        K=int(claveLst[2])
+        self.rsaTextoResult.clear()
+        texto=clavePublica.ClavePublicaElGamal.cifrar(self.gamTextoOriginal.toPlainText(),g,p,K)
+        y1Str=texto[0]
+        y2Str=texto[1]
+        self.gamTextoResult.clear()
+        self.gamTextoResult.insertPlainText((y1Str+','+y2Str))
+
+    def gamalGenerar(self):
+        g,p,K,a=clavePublica.ClavePublicaElGamal.clave()
+        self.claveGamalPublica.clear()
+        self.claveGamalPrivada.clear()
+        self.claveGamalPublica.insert(str(g)+','+str(p)+','+str(K))
+        self.claveGamalPrivada.insert(str(a)+','+str(p))
+    
     def gamalCopiar(self):
         clipboard.copy(self.gamTextoResult.toPlainText())
+##=======================================================================================================================
+
+##Rabin=========================================================================================================
+    def rabinCifrar(self):
+        clave=int(self.claveRabinPublica.text())
+        self.rabTextoResult.clear()
+        s=self.rabTextoOriginal.toPlainText()
+        m = int.from_bytes(s.encode('utf-8'), byteorder='big')
+        cifrado=clavePublica.Rabin.cifrar(m,clave)
+        self.rabTextoResult.insertPlainText(str(cifrado))
+    def rabinDescifrar(self):
+        clave=self.claveRabinPrivada.text()
+        claveLst=clave.split(sep=',')
+        p=int(claveLst[0])
+        q=int(claveLst[1])
+        self.rabTextoResult.clear()
+        cifrado=clavePublica.Rabin.descifrar(int(self.rabTextoOriginal.toPlainText()),p,q)
+        for b in cifrado:
+            dec = b.to_bytes(math.ceil(b.bit_length() / 8), byteorder='big').decode('utf-8', 'replace')
+            self.rabTextoResult.insertPlainText(dec)
+            self.rabTextoResult.insertPlainText("\n")
+    def rabinGenerar(self):
+        clave=clavePublica.Rabin.clave(self.rabTextoOriginal.toPlainText())
+        n,p,q=clave
+        self.claveRabinPublica.clear()
+        self.claveRabinPrivada.clear()
+        self.claveRabinPublica.insert(str(n))
+        self.claveRabinPrivada.insert(str(p)+','+str(q))
+        return
+
+    def rabinCopiar(self):
+        clipboard.copy(self.rabTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##Rsa(firma)=========================================================================================================

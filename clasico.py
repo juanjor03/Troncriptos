@@ -2,8 +2,6 @@ import random,math,collections,re
 import numpy
 from numpy.linalg import det
 from numpy import zeros,array
-import sys,pickle
-import scipy.misc
 import imageio
 
 class Desplazamiento:
