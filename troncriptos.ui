@@ -537,7 +537,7 @@ QToolButton:hover{
 }</string>
           </property>
           <property name="currentIndex">
-           <number>21</number>
+           <number>17</number>
           </property>
           <widget class="QWidget" name="inicio">
            <property name="styleSheet">
@@ -4075,6 +4075,75 @@ QLineEdit{
              </rect>
             </property>
            </widget>
+           <widget class="QLineEdit" name="sdesClave">
+            <property name="geometry">
+             <rect>
+              <x>355</x>
+              <y>160</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_37">
+            <property name="geometry">
+             <rect>
+              <x>330</x>
+              <y>200</y>
+              <width>231</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13)</string>
+            </property>
+            <property name="text">
+             <string>Numero binario de 10 bits</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_38">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>60</y>
+              <width>231</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13)</string>
+            </property>
+            <property name="text">
+             <string>Numero binario de 8 bits</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
           </widget>
           <widget class="QWidget" name="blTdes">
            <property name="styleSheet">
@@ -4256,7 +4325,7 @@ QLineEdit{
             <property name="geometry">
              <rect>
               <x>358</x>
-              <y>293</y>
+              <y>260</y>
               <width>173</width>
               <height>64</height>
              </rect>
@@ -4312,6 +4381,139 @@ QLineEdit{
               <width>251</width>
               <height>251</height>
              </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_36">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>200</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13)</string>
+            </property>
+            <property name="text">
+             <string>Para ECB no necesita IV</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_39">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>330</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>Modo de encriptación</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="tdesModo">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>360</y>
+              <width>69</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>CBC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>CTR</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OFB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ECB</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_40">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>170</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>clave,iv</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="claveTDes">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>130</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </widget>
@@ -4495,7 +4697,7 @@ QLineEdit{
             <property name="geometry">
              <rect>
               <x>358</x>
-              <y>293</y>
+              <y>250</y>
               <width>173</width>
               <height>64</height>
              </rect>
@@ -4552,6 +4754,139 @@ QLineEdit{
               <height>251</height>
              </rect>
             </property>
+           </widget>
+           <widget class="QLabel" name="label_33">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>330</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>Modo de encriptación</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_34">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>200</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13)</string>
+            </property>
+            <property name="text">
+             <string>Para ECB no necesita IV</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="claveDes">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>130</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_35">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>170</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>clave,iv</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="desModo">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>360</y>
+              <width>69</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>CBC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>CTR</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OFB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ECB</string>
+             </property>
+            </item>
            </widget>
           </widget>
           <widget class="QWidget" name="blAes">
@@ -4760,7 +5095,7 @@ QLineEdit{
             <property name="geometry">
              <rect>
               <x>358</x>
-              <y>293</y>
+              <y>250</y>
               <width>173</width>
               <height>64</height>
              </rect>
@@ -4816,6 +5151,139 @@ QLineEdit{
               <width>251</width>
               <height>251</height>
              </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_41">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>200</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13)</string>
+            </property>
+            <property name="text">
+             <string>Para ECB no necesita IV</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_42">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>330</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>Modo de encriptación</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="aesModo">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>360</y>
+              <width>69</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>CBC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>CTR</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OFB</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ECB</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_43">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>170</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>clave,iv</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="claveAes">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>130</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </widget>

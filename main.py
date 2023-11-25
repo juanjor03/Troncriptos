@@ -134,12 +134,24 @@ class MainGui(QtWidgets.QMainWindow):
         self.hilImageCifrar.clicked.connect(self.hilImgCifrar)
         self.hilImageDescifrar.clicked.connect(self.hilImgDescifrar)
 ##Sdes========================================================================================================
+        self.sdesCifrar.clicked.connect(self.sdesBCifrar)
+        self.sdesDescifrar.clicked.connect(self.sdesBDescifrar)
+        self.sdesGenerar.clicked.connect(self.sdesBGenerarClave)
         self.sdesCopiar.clicked.connect(self.sDesTextoCopiar)
-##Tdes========================================================================================================  
+##Tdes======================================================================================================== 
+        self.tdesCifrar.clicked.connect(self.tdesBCifrar)
+        self.tdesDescifrar.clicked.connect(self.tdesBDescifrar)
+        self.tdesGenerar.clicked.connect(self.tdesBGenerarClave) 
         self.tdesCopiar.clicked.connect(self.tDesCopiar)    
 ##Des======================================================================================================== 
+        self.desCifrar.clicked.connect(self.desBCifrar)
+        self.desDescifrar.clicked.connect(self.desBDescifrar)
+        self.desGenerar.clicked.connect(self.desBGenerarClave)
         self.desCopiar.clicked.connect(self.desBCopiar)
 ##Aes========================================================================================================
+        self.aesCifrar.clicked.connect(self.aesBCifrar)
+        self.aesDescifrar.clicked.connect(self.aesBDescifrar)
+        self.aesGenerar.clicked.connect(self.aesBGenerarClave)
         self.aesCopiar.clicked.connect(self.aesTextoCopiar)
 ##AesImage========================================================================================================
         self.aesImageGenerar.clicked.connect(self.aesImageGenerarClave)
@@ -148,7 +160,7 @@ class MainGui(QtWidgets.QMainWindow):
 ##Rsa========================================================================================================
         self.rsaCifrar.clicked.connect(self.rsaBCifrar)
         self.rsaDescifrar.clicked.connect(self.rsaBDescifrar)
-        self.rabGenerar.clicked.connect(self.rsaBGenerar)
+        self.rsaGenerar.clicked.connect(self.rsaBGenerar)
         self.rsaCopiar.clicked.connect(self.rsaBCopiar)
 ##Rabin========================================================================================================
         self.rabCifrar.clicked.connect(self.rabinCifrar)
@@ -374,21 +386,279 @@ class MainGui(QtWidgets.QMainWindow):
 ##=======================================================================================================================
 
 ##Sdes=========================================================================================================
+    def sdesBCifrar(self):
+        if(self.sdesTextoOriginal.toPlainText()!=''):
+            mensaje=self.sdesTextoOriginal.toPlainText()
+            if(self.sdesClave.text()!=''):
+                clave=self.sdesClave.text()
+                cifrado=bloque.BloqueSDES.cifrar(mensaje,clave)
+                self.sdesTextoResult.clear()
+                self.sdesTextoResult.insertPlainText(cifrado)
+    def sdesBDescifrar(self):
+        if(self.sdesTextoOriginal.toPlainText()!=''):
+            mensaje=self.sdesTextoOriginal.toPlainText()
+            if(self.sdesClave.text()!=''):
+                clave=self.sdesClave.text()
+                descifrado=bloque.BloqueSDES.descifrar(mensaje,clave)
+                self.sdesTextoResult.clear()
+                self.sdesTextoResult.insertPlainText(descifrado)
+    def sdesBGenerarClave(self):
+        self.sdesClave.clear()
+        clave=bloque.BloqueSDES.key()
+        self.sdesClave.insert(clave)
+
     def sDesTextoCopiar(self):
         clipboard.copy(self.sdesTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##Tdes=========================================================================================================
+    def tdesBCifrar(self):
+        if (self.tdesTextoOriginal.toPlainText()!=''):
+            texto=self.tdesTextoOriginal.toPlainText()
+            if(self.claveTDes.text()!=""):
+               modo=self.tdesModo.currentText()
+               clave=self.claveTDes.text()
+               self.tdesTextoResult.clear()
+               if(modo=='CBC'):
+                    claveIv=self.claveTDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueTDES.cifrarCBC(clave,texto,iv)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+               elif(modo=='ECB'):
+                    clave=self.claveTDes.text()
+                    cifrado=bloque.BloqueTDES.cifrarECB(clave,texto)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+               elif(modo=='OFB'):
+                    claveIv=self.claveTDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueTDES.cifrarOFB(clave,texto,iv)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+               elif(modo=='CTR'):
+                    claveIv=self.claveTDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueTDES.cifrarCTR(clave,texto,iv)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+    def tdesBDescifrar(self):
+        if (self.tdesTextoOriginal.toPlainText()!=''):
+            texto=self.tdesTextoOriginal.toPlainText()
+            if(self.claveTDes.text()!=""):
+               modo=self.tdesModo.currentText()
+               clave=self.claveTDes.text()
+               self.tdesTextoResult.clear()
+               if(modo=='CBC'):
+                    claveIv=self.claveTDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueTDES.descifrarCBC(clave,texto,iv)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+               elif(modo=='ECB'):
+                    clave=self.claveTDes.text()
+                    cifrado=bloque.BloqueTDES.descifrarECB(clave,texto)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+               elif(modo=='OFB'):
+                    claveIv=self.claveTDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueTDES.descifrarOFB(clave,texto,iv)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+               elif(modo=='CTR'):
+                    claveIv=self.claveTDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueTDES.descifrarCTR(clave,texto,iv)
+                    self.tdesTextoResult.insertPlainText(cifrado)
+    def tdesBGenerarClave(self):
+        self.claveTDes.clear()
+        modo=modo=self.tdesModo.currentText()
+        if(modo=='CBC'):
+            clave,iv=bloque.BloqueTDES.claveIv()
+            self.claveTDes.insert(clave+','+iv)
+        elif(modo=='ECB'):
+            clave=bloque.BloqueTDES.clave()
+            self.claveTDes.insert(clave)
+        elif(modo=='OFB'):
+            clave,iv=bloque.BloqueTDES.claveIv()
+            self.claveTDes.insert(clave+','+iv)
+        elif(modo=='CTR'):
+            clave,iv=bloque.BloqueTDES.claveCTR()
+            self.claveTDes.insert(clave+','+iv)
     def tDesCopiar(self):
         clipboard.copy(self.tdesTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##Des=========================================================================================================
+    def desBCifrar(self):
+        if (self.desTextoOriginal.toPlainText()!=''):
+            texto=self.desTextoOriginal.toPlainText()
+            if(self.claveDes.text()!=""):
+               modo=self.desModo.currentText()
+               clave=self.claveDes.text()
+               self.desTextoResult.clear()
+               if(modo=='CBC'):
+                    claveIv=self.claveDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueDES.cifrarCBC(clave,texto,iv)
+                    self.desTextoResult.insertPlainText(cifrado)
+               elif(modo=='ECB'):
+                    clave=self.claveDes.text()
+                    cifrado=bloque.BloqueDES.cifrarECB(clave,texto)
+                    self.desTextoResult.insertPlainText(cifrado)
+               elif(modo=='OFB'):
+                    claveIv=self.claveDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueDES.cifrarOFB(clave,texto,iv)
+                    self.desTextoResult.insertPlainText(cifrado)
+               elif(modo=='CTR'):
+                    claveIv=self.claveDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueDES.cifrarCTR(clave,texto,iv)
+                    self.desTextoResult.insertPlainText(cifrado)
+    def desBDescifrar(self):
+        if (self.desTextoOriginal.toPlainText()!=''):
+            texto=self.desTextoOriginal.toPlainText()
+            if(self.claveDes.text()!=""):
+               modo=self.desModo.currentText()
+               clave=self.claveDes.text()
+               self.desTextoResult.clear()
+               if(modo=='CBC'):
+                    claveIv=self.claveDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueDES.descifrarCBC(clave,texto,iv)
+                    self.desTextoResult.insertPlainText(cifrado)
+               elif(modo=='ECB'):
+                    clave=self.claveDes.text()
+                    cifrado=bloque.BloqueDES.descifrarECB(clave,texto)
+                    self.desTextoResult.insertPlainText(cifrado)
+               elif(modo=='OFB'):
+                    claveIv=self.claveDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueDES.descifrarOFB(clave,texto,iv)
+                    self.desTextoResult.insertPlainText(cifrado)
+               elif(modo=='CTR'):
+                    claveIv=self.claveDes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueDES.descifrarCTR(clave,texto,iv)
+                    self.desTextoResult.insertPlainText(cifrado)
+    def desBGenerarClave(self):
+        self.claveDes.clear()
+        modo=modo=self.desModo.currentText()
+        if(modo=='CBC'):
+            clave,iv=bloque.BloqueDES.claveIv()
+            self.claveDes.insert(clave+','+iv)
+        elif(modo=='ECB'):
+            clave=bloque.BloqueDES.clave()
+            self.claveDes.insert(clave)
+        elif(modo=='OFB'):
+            clave,iv=bloque.BloqueDES.claveIv()
+            self.claveDes.insert(clave+','+iv)
+        elif(modo=='CTR'):
+            clave,iv=bloque.BloqueDES.claveCTR()
+            self.claveDes.insert(clave+','+iv)
     def desBCopiar(self):
         clipboard.copy(self.desTextoResult.toPlainText())
 ##=======================================================================================================================
 
 ##AesTexto=========================================================================================================
+    def aesBCifrar(self):
+        if (self.aesTextoOriginal.toPlainText()!=''):
+            texto=self.aesTextoOriginal.toPlainText()
+            if(self.claveAes.text()!=""):
+               modo=self.aesModo.currentText()
+               clave=self.claveAes.text()
+               self.aesTextoResult.clear()
+               if(modo=='CBC'):
+                    claveIv=self.claveAes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueAES.cifrarCBC(clave,texto,iv)
+                    self.aesTextoResult.insertPlainText(cifrado)
+               elif(modo=='ECB'):
+                    clave=self.claveAes.text()
+                    cifrado=bloque.BloqueAES.cifrarECB(clave,texto)
+                    self.aesTextoResult.insertPlainText(cifrado)
+               elif(modo=='OFB'):
+                    claveIv=self.claveAes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueAES.cifrarOFB(clave,texto,iv)
+                    self.aesTextoResult.insertPlainText(cifrado)
+               elif(modo=='CTR'):
+                    claveIv=self.claveAes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueAES.cifrarCTR(clave,texto,iv)
+                    self.aesTextoResult.insertPlainText(cifrado)
+    def aesBDescifrar(self):
+        if (self.aesTextoOriginal.toPlainText()!=''):
+            texto=self.aesTextoOriginal.toPlainText()
+            if(self.claveAes.text()!=""):
+               modo=self.aesModo.currentText()
+               clave=self.claveAes.text()
+               self.aesTextoResult.clear()
+               if(modo=='CBC'):
+                    claveIv=self.claveAes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueAES.descifrarCBC(clave,texto,iv)
+                    self.aesTextoResult.insertPlainText(cifrado)
+               elif(modo=='ECB'):
+                    clave=self.claveAes.text()
+                    cifrado=bloque.BloqueAES.descifrarECB(clave,texto)
+                    self.aesTextoResult.insertPlainText(cifrado)
+               elif(modo=='OFB'):
+                    claveIv=self.claveAes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueAES.descifrarOFB(clave,texto,iv)
+                    self.aesTextoResult.insertPlainText(cifrado)
+               elif(modo=='CTR'):
+                    claveIv=self.claveAes.text()
+                    claveIvLst=claveIv.split(sep=',')
+                    clave=claveIvLst[0]
+                    iv=claveIvLst[1]
+                    cifrado=bloque.BloqueAES.descifrarCTR(clave,texto,iv)
+                    self.aesTextoResult.insertPlainText(cifrado)
+    def aesBGenerarClave(self):
+        self.claveAes.clear()
+        modo=self.aesModo.currentText()
+        if(modo=='CBC'):
+            clave,iv=bloque.BloqueAES.claveIv()
+            self.claveAes.insert(clave+','+iv)
+        elif(modo=='ECB'):
+            clave=bloque.BloqueAES.clave()
+            self.claveAes.insert(clave)
+        elif(modo=='OFB'):
+            clave,iv=bloque.BloqueAES.claveIv()
+            self.claveAes.insert(clave+','+iv)
+        elif(modo=='CTR'):
+            clave,iv=bloque.BloqueAES.claveCTR()
+            self.claveAes.insert(clave+','+iv)
     def aesTextoCopiar(self):
         clipboard.copy(self.aesTextoResult.toPlainText())
 ##=======================================================================================================================
