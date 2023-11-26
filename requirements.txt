@@ -1,0 +1,14 @@
+imageio==2.33.0
+imutils==0.5.4
+numpy==1.26.1
+opencv-python==4.8.1.78
+Pillow==10.1.0
+pycryptodome==3.19.0
+pycryptodomex==3.19.0
+pyperclip==1.8.2
+PyPrind==2.11.3
+PyQt5==5.15.9
+pyqt5-plugins==5.15.9.2.3
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.13.0
+pyqt5-tools==5.15.9.3.3

@@ -537,7 +537,7 @@ QToolButton:hover{
 }</string>
           </property>
           <property name="currentIndex">
-           <number>24</number>
+           <number>5</number>
           </property>
           <widget class="QWidget" name="inicio">
            <property name="styleSheet">

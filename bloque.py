@@ -529,8 +529,4 @@ class AesImage:
 		return(clave.encode('utf-8'),iv.encode('utf-8')) #retorna clave e iv aleatoria de 8 bytes de tipo bytes
 
 
-##clave de 32 caracteres |"src/Prueba/AesEncrypted.png" | "src/Prueba/AesDecrypted.png"
 ##iv es un string de tamaño 16 hexadecimal que se trabaja como bytes, ivCTR es un string de tamaño 8 hexadecimal que se trabaja como bytes
-
-##iv_str = "0123456789ABCDEF"  # IV como string hexadecimal
-##iv_bytes = bytes.fromhex(iv_str)  # Convierte el string hexadecimal a bytes

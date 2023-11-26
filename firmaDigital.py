@@ -135,7 +135,7 @@ class FirmaDigitalElGamal:
             return w%m
         
     def clave():
-        p=103217#2305843009213693951 ##p = p en la presentacion del profe
+        p=2305843009213693951 ##p = p en la presentacion del profe
         g=random.randint(2,20) ##g = alpha en la presentacion del profe
         a=random.randint(0,p-1)#random.randint(21702,p-1)##clave privada ##a = a en la presentacion del profe
         K=pow(g,a,p)#132#pow(g,a,p) ##K=beta  en la presentacion del profe
