@@ -537,7 +537,7 @@ QToolButton:hover{
 }</string>
           </property>
           <property name="currentIndex">
-           <number>23</number>
+           <number>24</number>
           </property>
           <widget class="QWidget" name="inicio">
            <property name="styleSheet">
@@ -6689,7 +6689,7 @@ QLineEdit{
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+              <normaloff>src/BotonesGral/Firmar.png</normaloff>src/BotonesGral/Firmar.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -6715,7 +6715,7 @@ QLineEdit{
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+              <normaloff>src/BotonesGral/Verificar.png</normaloff>src/BotonesGral/Verificar.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -6774,7 +6774,7 @@ QLineEdit{
             <property name="geometry">
              <rect>
               <x>358</x>
-              <y>293</y>
+              <y>140</y>
               <width>173</width>
               <height>64</height>
              </rect>
@@ -7167,7 +7167,7 @@ QLineEdit{
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>src/BotonesGral/Cifrar.png</normaloff>src/BotonesGral/Cifrar.png</iconset>
+              <normaloff>src/BotonesGral/Firmar.png</normaloff>src/BotonesGral/Firmar.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -7193,7 +7193,7 @@ QLineEdit{
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>src/BotonesGral/Descifrar.png</normaloff>src/BotonesGral/Descifrar.png</iconset>
+              <normaloff>src/BotonesGral/Verificar.png</normaloff>src/BotonesGral/Verificar.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -7252,7 +7252,7 @@ QLineEdit{
             <property name="geometry">
              <rect>
               <x>358</x>
-              <y>293</y>
+              <y>300</y>
               <width>173</width>
               <height>64</height>
              </rect>
@@ -7308,6 +7308,158 @@ QLineEdit{
               <width>251</width>
               <height>251</height>
              </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_44">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>350</y>
+              <width>241</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13);
+background:transparent</string>
+            </property>
+            <property name="text">
+             <string>Tamaño máximo de 12 caracters</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_45">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>260</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>Privada</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_46">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>70</y>
+              <width>291</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:rgb(152, 18, 13);
+background:transparent</string>
+            </property>
+            <property name="text">
+             <string>Texto en mayúsculas y sin espacios</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="clavefiGamalPublica">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>130</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="clavefiGamalPrivada">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>220</y>
+              <width>191</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_47">
+            <property name="geometry">
+             <rect>
+              <x>360</x>
+              <y>170</y>
+              <width>171</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white</string>
+            </property>
+            <property name="text">
+             <string>Pública</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </widget>

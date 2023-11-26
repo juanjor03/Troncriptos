@@ -147,4 +147,3 @@ class Rabin:
             else:
                 return False
         return True
-

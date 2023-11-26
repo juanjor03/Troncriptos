@@ -174,6 +174,9 @@ class MainGui(QtWidgets.QMainWindow):
         self.gamGenerar.clicked.connect(self.gamalGenerar)
         self.gamCopiar.clicked.connect(self.gamalCopiar)
 ##FirmaDigitalRsa========================================================================================================
+        self.fiRsaCifrar.clicked.connect(self.firmaDigitalRSAfirmar)
+        self.fiRsaDescifrar.clicked.connect(self.firmaDigitalRSAverificar)
+        self.fiRsaGenerar.clicked.connect(self.firmaDigitalRSAgenerarClave)
         self.fiRsaCopiar.clicked.connect(self.firmaDigitalRsaCopiar)
 ##FirmaDigitalDsa========================================================================================================
         self.fiDsaCifrar.clicked.connect(self.dsaBFirmar)
@@ -181,6 +184,9 @@ class MainGui(QtWidgets.QMainWindow):
         self.fiDsaGenerar.clicked.connect(self.dsaBGenerarClave)
         self.fiDsaCopiar.clicked.connect(self.firmaDigitalDsaCopiar)
 ##FirmaDigitalGamal========================================================================================================
+        self.fiGamCifrar.clicked.connect(self.gamalfiFirmar)
+        self.fiGamDescifrar.clicked.connect(self.gamalfiVerificar)
+        self.fiGamGenerar.clicked.connect(self.gamalfiGenerar)
         self.fiGamCopiar.clicked.connect(self.firmaDigitalGamalCopiar)
 ##=======================================================================================================================        
 ##=====================================FUNCIONES DE BOTONES Y CAMPOS DE TEXTO============================================
@@ -865,6 +871,37 @@ class MainGui(QtWidgets.QMainWindow):
 ##=======================================================================================================================
 
 ##Rsa(firma)=========================================================================================================
+    def firmaDigitalRSAfirmar(self):
+        f=open("Prueba/clavePrivadaFirmaRSA.pem","r")
+        clave=RSA.import_key(f.read().encode('utf-8'))
+        texto=self.fiRsaTextoOriginal.toPlainText()
+        firma=firmaDigital.FirmaDigitalRSA.firma(texto,clave)
+        self.fiRsaTextoResult.clear()
+        self.fiRsaTextoResult.insertPlainText(str(firma))
+        f.close()
+    def firmaDigitalRSAverificar(self):
+        f=open("Prueba/clavePublicaFirmaRSA.pem","r")
+        clave=RSA.import_key(f.read().encode('utf-8'))
+        textoFirma=self.fiRsaTextoOriginal.toPlainText()
+        textoFirmaLst=textoFirma.split(sep=',')
+        texto=textoFirmaLst[0]
+        firma=int(textoFirmaLst[1])
+        try:
+            verificar=firmaDigital.FirmaDigitalRSA.verificar(texto,clave,firma)
+            self.fiRsaTextoResult.clear()
+            self.fiRsaTextoResult.insertPlainText(verificar)
+        except ValueError:
+            self.fiRsaTextoResult.clear()
+            self.fiRsaTextoResult.insertPlainText('EL MENSAJE NO ES AUTÉNTICO')
+        f.close()
+    def firmaDigitalRSAgenerarClave(self):
+        clave=firmaDigital.FirmaDigitalRSA.clave()
+        f=open("Prueba/clavePrivadaFirmaRSA.pem","w")
+        f.write(clave.export_key().decode('utf-8'))
+        f.close()
+        g=open("Prueba/clavePublicaFirmaRSA.pem","w")
+        g.write(clave.public_key().export_key().decode('utf-8'))
+        g.close()
     def firmaDigitalRsaCopiar(self):
         clipboard.copy(self.fiRsaTextoResult.toPlainText())
 ##=======================================================================================================================
@@ -906,6 +943,48 @@ class MainGui(QtWidgets.QMainWindow):
 ##=======================================================================================================================
 
 ##Gamal(firma)=========================================================================================================
+    def gamalfiFirmar(self):
+        clave=self.clavefiGamalPrivada.text()
+        claveLst=clave.split(sep=',')
+        g=int(claveLst[0])
+        p=int(claveLst[1])
+        a=int(claveLst[2])
+        self.fiGamTextoResult.clear()
+
+        texto=self.fiGamTextoOriginal.toPlainText()
+
+        gamma,delta=firmaDigital.FirmaDigitalElGamal.firmar(texto,g,p,a)
+        self.fiGamTextoResult.clear()
+        self.fiGamTextoResult.insertPlainText(gamma+','+delta)
+
+    def gamalfiVerificar(self):
+        textofi=self.fiGamTextoOriginal.toPlainText()
+        textofiLst=textofi.split(sep=',')
+        texto=textofiLst[0]
+        gamma=textofiLst[1]
+        delta=textofiLst[2]
+
+        clave=self.clavefiGamalPublica.text()
+        claveLst=clave.split(sep=',')
+        K=int(claveLst[0])
+        g=int(claveLst[1])
+        p=int(claveLst[2])
+        self.fiGamTextoResult.clear()
+        try:
+            verificar=firmaDigital.FirmaDigitalElGamal.verificar(texto,gamma,delta,K,g,p)
+            self.fiGamTextoResult.clear()
+            self.fiGamTextoResult.insertPlainText(verificar)
+        except ValueError:
+            self.fiGamTextoResult.clear()
+            self.fiGamTextoResult.insertPlainText('EL MENSAJE NO ES AUTÉNTICO')
+
+
+    def gamalfiGenerar(self):
+        g,p,K,a=firmaDigital.FirmaDigitalElGamal.clave()
+        self.clavefiGamalPublica.clear()
+        self.clavefiGamalPrivada.clear()
+        self.clavefiGamalPublica.insert(str(K)+','+str(g)+','+str(p))
+        self.clavefiGamalPrivada.insert(str(g)+','+str(p)+','+str(a))
     def firmaDigitalGamalCopiar(self):
         clipboard.copy(self.fiGamTextoResult.toPlainText())
 ##=======================================================================================================================
